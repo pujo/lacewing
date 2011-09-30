@@ -1,0 +1,26 @@
+
+DYNAMICALLY LINKING
+-------------------
+
+A Visual C++ 2008 project is provided in the 'msvc' folder.  No extra
+configuration is necessary - just open the project and build.
+
+This will produce a DLL and LIB to link to in the 'bin' folder, ready to
+dynamically link to.
+
+
+STATICALLY LINKING
+------------------
+
+The easiest approach to statically link Lacewing is just to include the files
+from src/ and src/windows/ in your project.  It should build without problems.
+
+If you do this, you should #define LacewingFunction before including Lacewing.h:
+
+    #define LacewingFunction
+    #include <Lacewing.h>
+
+This will prevent Lacewing.h from trying to import the Lacewing functions as if
+they were in a DLL.
+
+
