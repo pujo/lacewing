@@ -1,104 +1,79 @@
+@charset "utf-8";
 
-#nocol
+body 
 {
-    clear: both;
+	color: #000;
+	background-color: #FFF;
+	font-family: Segoe UI, Tahoma, sans-serif;
+	font-size:0.9em;
+
 }
 
 h1
 {
-    font-size: 1.3em;
-    font-weight: normal;
-    text-align: center;
-}
-
-h3
-{
-    font-size: 1.1em;
-    text-align: center;
+	font-family: Helvetica Neue, Helvetica, Arial,  sans-serif;
+	font-size:1.4em;
+	padding-bottom:0.2em;
+	margin-top:0px;
+	margin-bottom:0.5em;
+	color:#84cf40;
+	border-bottom: 1px dashed #AAA;
 }
 
 h2
 {
-    font-size: 1.2em;
-    font-weight: normal;
-    text-align: center;
-}
-
-hr
-{
-    margin: 0;
-    padding: 0;
-    background-color: #999;
-    height: 1px;
-    border: 0;
+	font-family: Helvetica Neue, Helvetica, Arial,  sans-serif;
+	font-size:1.0em;
+	padding-bottom:0.2em;
+	margin-top:0px;
+	margin-bottom:0.5em;
+	color:#84cf40;
 }
 
 a
 {
-    color: #22AA00;
-    text-decoration: none;
+	color:#108F00;
+	text-decoration: none;
 }
 
 a:hover
 {
-    color: #33EE11;
-    text-decoration: underline;
-}
-    
-body
-{
-    background: #585858;
-    font: normal 12px Verdana,Tahoma,Arial,sans-serif;
+	color:#108F00;
+	text-decoration: underline;
 }
 
-#container
+a:visit
 {
-    width: 640px;
-    margin: 0 auto;
-    padding: 0;
-    background: url(middle.png) repeat-y;
+	color:#108F00;
 }
 
-#content
+div#copyright
 {
-    padding-left: 20px;
-    padding-right: 20px;    
+	text-align:center;
+	font-size:small;
+	clear: both;
 }
 
-#left
+div#content
 {
-    width: 300px;
-    float: left;
+	width:750px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#right
+ul
 {
-    width: 300px;
-    float: right;
+	margin-top:0;
+	margin-bottom:0;
 }
 
-#top
+div#lacewing
 {
-    background: url(top.png) no-repeat;
-    width: 640px;
-    height: 158px;
-    padding: 0;
-    margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(lacewing.png) no-repeat;
+	width: 414px;
+	height: 150px;
 }
 
-#bottom
-{
-    clear: both;
-    width: 640px;
-    height: 20px;
-    background: url(bottom.png);
-    padding: 0;
-}
 
-#footer
-{
-    padding-top: 15px;
-    color: #DDD;
-    font-size: 0.9em;
-    text-align: center;
-}
