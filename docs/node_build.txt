@@ -1,6 +1,0 @@
-
-Lacewing can be compiled as a module for Node.JS (Unix only).  To do this:
-
-    node-waf configure build
-    node-waf install
-    
