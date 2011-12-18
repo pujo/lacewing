@@ -9,7 +9,7 @@ LIBS = @LIBS@
 SO_EXT = @SO_EXT@
 
 SO_NAME = liblacewing.@SO_EXT@.0.2
-REAL_NAME = liblacewing.@SO_EXT@.0.2.5
+REAL_NAME = liblacewing.@SO_EXT@.0.2.6
 
 ifeq ($(SO_EXT),so)
 	SONAME_FLAGS=-Wl,-soname,@SO_NAME@

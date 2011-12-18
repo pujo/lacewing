@@ -34,6 +34,22 @@ Issues with the documentation can be reported in the [gh-pages branch](https://g
 of the Lacewing GitHub repository.
 
 
+Changes in 0.2.6 (2011-Dec-18)
+==============================
+
+- `Webserver::Request::Cookie` now has a parameter allowing you to set attributes for each cookie.  By default,
+  both the `Secure` and `HttpOnly` attributes are set.
+
+- You can now iterate through the headers, cookies, GET/POST parameters and session data stored in a `Webserver::Request`
+
+- Bug when parsing fragmented HTTP requests fixed.  This made `Webserver` incompatible with recent fixes for the SSL
+  BEAST attack.
+
+- The library now builds as `liblacewing.dylib` on OS X instead of `liblacewing.so`
+
+- The source should now build using MinGW (although the included makefile will not work on Windows)
+
+
 Changes in 0.2.5 (2011-Oct-11)
 ==============================
 
