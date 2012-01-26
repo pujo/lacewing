@@ -1,7 +1,7 @@
 
 /* vim: set et ts=4 sw=4 ft=cpp:
  *
- * Copyright (C) 2011 James McLaughlin.  All rights reserved.
+ * Copyright (C) 2011, 2012 James McLaughlin.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -567,6 +567,17 @@ inline void Trim(char * Input, char *& Output)
 
     while(isspace(*End))
         *(End --) = 0;
+}
+
+inline void CopyString (char * Dest, const char * Source, int Size)
+{
+    int Length = strlen (Source);
+
+    if (Length > -- Size)
+        Length = Size;
+
+    memcpy (Dest, Source, Length);
+    Dest [Length] = 0;
 }
 
 #endif
