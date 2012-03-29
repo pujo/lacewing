@@ -259,7 +259,10 @@ bool Webserver::Request::Internal::In_URL (char * URL)
         if (GetField (URL, parsed, UF_PATH, path, path_length))
         {
             if (*path == '/')
+            {
                 ++ path;
+                -- path_length;
+            }
 
             char * end = path + path_length, b = *end;
 
@@ -332,8 +335,10 @@ bool Webserver::Request::Internal::In_URL (char * URL)
                 else
                     GetItems.Set (name_decoded, value_decoded, false);
 
-                if(!(get_data = next))
+                if (!next)
                     break;
+
+                get_data = ++ next;
             }
 
             *end = b;

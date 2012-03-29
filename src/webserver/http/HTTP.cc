@@ -285,9 +285,7 @@ int HTTPClient::onMessageComplete ()
         this->Buffer.Add <char> (0);
 
         char * post_data = this->Buffer.Buffer,
-                 * end = post_data + this->Buffer.Size, b = *end;
-
-        *end = 0;
+                 * end = post_data + this->Buffer.Size;
 
         for (;;)
         {
@@ -313,11 +311,11 @@ int HTTPClient::onMessageComplete ()
             else
                 Request.PostItems.Set (name_decoded, value_decoded, false);
 
-            if(!(post_data = next))
+            if (!next)
                 break;
-        }
 
-        *end = b;
+            post_data = ++ next;
+        }
 
         this->Buffer.Reset();
     }
